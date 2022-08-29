@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ===================GOOGLE FONTS / DANCING SCRIPT AND POPPINS============= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>codeFood</title>
+</head>
+<body>
+    <div class="app">
+        <div class="menu-esquerdo">
+            <div class="titulo">DevFood</div>
+            <ul class="ulRreceitas">
+               
+            </ul>
+        </div>
+        <div class="menu-direito">
+            <div class="registro-receitas ">
+                <div class="view">
+                    <div class="adicionar-receita todos-titulos">Adicionar Receita</div>
+                    <ion-icon onclick="verReceitas()" class="olhos" name="eye-outline"></ion-icon>
+                </div>
+               <div class="titulo-registro todos-sub-titulos">Nome da receita</div>
+               <input class="campoInputLine" id="nomeReceita" type="text">
+               <div class="titulo-registro todos-sub-titulos">Ingredientes</div>
+               <input class="campoInputLine" id="nomeIngrediente" type="text">
+               <div class="titulo-registro todos-sub-titulos">Modo de preparo</div>
+               <textarea class="campoInput" name="" id="nomePreparo" cols="30" rows="10"></textarea>
+               <button onclick="adicionarNovaReceita()" class="btn-adicionar">Adicionar receita</button>
+            </div>
+            <!-- ============================SEGUNDA TELA====================== -->
+            <div class="registro-receitas registro-receitas2 escondido">
+                <div class="view">
+                    <div class="adicionar-receita todos-titulos titulo-receita">Bolo de banana</div>
+                    <ion-icon onclick="fecharReceitas()" class="olhos" name="eye-off-outline"></ion-icon>
+                </div>
+               <div class="titulo-registro todos-sub-titulos ingredientes-receita">Ingredientes</div>
+               <div class="resumo-ingrediente-receita resumo"></div>
+               <div class="titulo-registro todos-sub-titulos preparos-receita">Modo de preparo</div>
+              <div class="resumo-preparo-receita resumo"></div>
+               <button class="btn-adicionar">Adicionar receita</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
